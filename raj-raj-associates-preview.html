@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--
+============================================================================
+ RAJ & RAJ ASSOCIATES — QUICK-SHARE PREVIEW (single HTML file)
+============================================================================
+ WHAT THIS IS
+ This one file is a static preview of the full Next.js website, for
+ sharing quickly by email, WhatsApp or a shared drive so others can look
+ at the design and content in any browser — no install, no server.
+
+ It is a DEMO copy of the content, not the production system:
+ - The contact form here only opens the visitor's email app (or shows a
+   copy-able summary) — it does NOT log to Excel or send a server email.
+ - The full, working version (with the real Excel log + email backend)
+   is the separate Next.js codebase already provided.
+
+ HOW TO SHARE
+ Just attach or upload this single .html file. The recipient double-clicks
+ it (or opens it in a browser) — everything is self-contained.
+
+ HOW TO EDIT
+ Search for "CONFIG" to change phone, email or address in one place.
+ Search for "CONTENT DATA" to find every list of services, FAQs, glossary
+ terms, case notes, articles and testimonials, each clearly labelled.
+============================================================================
+-->
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raj &amp; Raj Associates | Clear Legal Help</title>
+<meta name="description" content="Plain-English legal information and support across civil, criminal, corporate, contract, employment, family, IP, property, consumer and cyber law in India.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F8F5EE;--surface:#fff;--surface2:#F1ECE0;--line:#E6DFCD;
+  --navy900:#0A121F;--navy800:#0F1B2E;--navy700:#152641;--navy600:#1E3557;--navy500:#2C4874;--navy400:#4C6AA0;--navy200:#A9B6D0;--navy100:#D6DCE8;
+  --ink:#152641;--ink2:#4B4A78;--ink3:#7A8399;
+  --gold:#B08D34;--gold-dk:#8F7128;--gold-lt:#C9A44C;
+  --serif:"Spectral",Georgia,serif;--sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--hdr:72px;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + var(--hdr) + 12px);background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.65 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--navy600)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.16;margin:0 0 .5em;color:var(--navy800)}
+h1{font-size:clamp(2.3rem,5vw,3.6rem)}h2{font-size:clamp(1.7rem,3vw,2.3rem)}h3{font-size:1.25rem}h4{font-size:1.02rem}
+p{margin:0 0 1em}ul{padding-left:1.15em;margin:0 0 1em}li{margin:.3em 0}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.ic{width:1.15em;height:1.15em;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.2em}
+.btn{display:inline-flex;align-items:center;gap:.5em;font:700 .93rem/1 var(--sans);padding:.95em 1.5em;border-radius:999px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-navy{background:var(--navy700);color:#fff}.btn-navy:hover{background:var(--navy600)}
+.btn-gold{background:var(--gold);color:#241a00}.btn-gold:hover{background:var(--gold-lt)}
+.btn-line{border-color:var(--navy700);background:transparent;color:var(--navy700)}.btn-line:hover{background:var(--navy700);color:#fff}
+.pill{display:inline-block;padding:.55em 1.1em;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink2);font:600 .85rem/1 var(--sans);cursor:pointer;text-decoration:none}
+.pill[aria-pressed="true"]{background:var(--navy700);border-color:var(--navy700);color:#fff}
+.tag{display:inline-block;padding:.3em .8em;border-radius:999px;background:var(--navy100);color:var(--navy700);font:700 .72rem/1 var(--sans);letter-spacing:.02em;text-transform:uppercase}
+.badge-ph{display:inline-block;padding:.3em .8em;border-radius:999px;background:var(--gold);color:#241a00;font:800 .68rem/1 var(--sans);letter-spacing:.03em;text-transform:uppercase}
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:18px;height:var(--hdr)}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy800);margin-right:auto}
+.brand .mark{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--navy800);color:#fff;font:600 .8rem var(--serif)}
+.brand .name{font:600 1.08rem var(--serif);color:var(--navy800)}
+nav#nav{display:flex;align-items:center;gap:22px}
+nav#nav a{font:600 .92rem var(--sans);color:var(--ink2);text-decoration:none;padding:6px 0}
+nav#nav a.on,nav#nav a:hover{color:var(--navy800)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:24px;height:2px;background:var(--navy800);margin:5px 0}
+#mnav{display:none;border-top:1px solid var(--line);background:var(--bg)}
+#mnav .wrap{display:flex;flex-direction:column;padding:10px 20px 18px}
+#mnav a{padding:10px 0;color:var(--ink);text-decoration:none;font-weight:600}
+@media (max-width:860px){nav#nav{display:none}.burger{display:block}}
+/* hero */
+.hero{border-bottom:1px solid var(--line);background:var(--surface2)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:64px 20px}
+.eyebrow{display:block;margin-bottom:10px;font:700 .82rem var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--gold-dk)}
+.hero p.lead{max-width:520px;font-size:1.12rem;color:var(--ink2)}
+.hero .cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px}
+.art{position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;border:1px solid var(--navy600);background:linear-gradient(135deg,var(--navy600),var(--navy800));background-size:200% 200%}
+.art::before{content:"";position:absolute;inset:0;opacity:.18;background-image:radial-gradient(circle at 20% 20%,#fff 1px,transparent 1.4px);background-size:22px 22px}
+.art .cap{position:absolute;left:16px;bottom:16px;background:rgba(248,245,238,.94);color:var(--navy700);font:700 .74rem var(--sans);padding:.5em .9em;border-radius:999px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding:44px 20px}}
+/* sections */
+.sec{padding:64px 0}
+.sec.tight{padding:52px 0}
+.sec-navy{background:var(--navy800);color:#fff}
+.sec-navy h2,.sec-navy h3{color:#fff}
+.sec-alt{background:var(--surface2)}
+.head-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px;margin-bottom:32px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+@media (max-width:900px){.g3{grid-template-columns:repeat(2,1fr)}.g5{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.g2,.g3,.g5{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;display:block}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(15,27,46,.28)}
+.card h3{margin-bottom:.35em}
+.card .more{display:inline-block;margin-top:10px;font:700 .84rem var(--sans);color:var(--gold-dk)}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.step .num{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--navy800);color:#fff;font:600 .95rem var(--serif)}
+.step h3{margin-top:14px;font-size:1.05rem}
+.step p{font-size:.92rem;color:var(--ink2);margin:0}
+/* problem-solution */
+.psf{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+@media (max-width:860px){.psf{grid-template-columns:1fr}}
+.psf-list{display:flex;flex-direction:column;gap:8px}
+.psf-opt{text-align:left;background:transparent;border:1px solid var(--navy600);color:var(--navy100);border-radius:12px;padding:13px 16px;font:600 .9rem var(--sans);cursor:pointer}
+.psf-opt[aria-pressed="true"]{background:var(--navy700);border-color:var(--gold)}
+.psf-ans{background:var(--navy700);border:1px solid var(--navy600);border-radius:16px;padding:28px}
+/* testimonials */
+.tcard{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+.tcard .badge-ph{position:absolute;top:-12px;left:20px}
+.tcard blockquote{margin:8px 0 0;color:var(--ink2)}
+.tcard figcaption{margin-top:14px;font-weight:700;color:var(--navy800)}
+.tcard figcaption span{display:block;font-weight:400;color:var(--ink3);font-size:.85rem}
+/* faq / glossary */
+details.q{border-bottom:1px solid var(--line);padding:16px 0}
+details.q summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-weight:700;color:var(--navy800)}
+details.q summary::-webkit-details-marker{display:none}
+details.q .plus{color:var(--ink3);transition:transform .15s}
+details.q[open] .plus{transform:rotate(45deg)}
+details.q .inner{margin-top:10px;color:var(--ink2)}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.term dt{font-weight:700;color:var(--navy700);font-size:.82rem;margin-top:10px}
+.term dt:first-child{margin-top:0}
+.term dd{margin:2px 0 0;color:var(--ink2);font-size:.92rem}
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.4fr;gap:28px;margin-top:32px}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+.cinfo{background:var(--navy800);color:#fff;border-radius:18px;padding:30px}
+.cinfo li{list-style:none;display:flex;gap:10px;align-items:flex-start;margin:0 0 14px}
+.cinfo a{color:#fff}
+.hrs{margin-top:16px;border-top:1px solid var(--navy600);padding-top:14px;font-size:.88rem;color:var(--navy100)}
+.hrs div{display:flex;justify-content:space-between;padding:3px 0}
+.cform{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
+.seg{display:flex;gap:6px;background:var(--surface2);padding:5px;border-radius:999px;margin-bottom:22px}
+.seg button{flex:1;border:0;background:transparent;padding:10px;border-radius:999px;font:700 .86rem var(--sans);color:var(--ink2);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--navy800);color:#fff}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fgrid .full{grid-column:1/-1}
+@media (max-width:640px){.fgrid{grid-template-columns:1fr}}
+label{display:block;font:600 .86rem var(--sans);color:var(--navy700);margin-bottom:6px}
+input,select,textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:.75em .9em;font:400 .95rem var(--sans);color:var(--ink);background:#fff}
+textarea{resize:vertical;min-height:100px}
+.radios{display:flex;flex-wrap:wrap;gap:16px;font-size:.88rem;color:var(--ink2)}
+.radios label{display:flex;align-items:center;gap:6px;font-weight:400;margin:0}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:.85rem;color:var(--ink2);margin:14px 0}
+.conf{font-size:.8rem;color:var(--ink3)}
+.done{margin-top:18px;padding:18px;border-radius:12px;background:var(--surface2);display:none}
+.done.show{display:block}
+.err{display:none;color:#B3261E;font-size:.8rem;margin-top:4px}
+input.bad,select.bad,textarea.bad{border-color:#B3261E}
+input.bad ~ .err,select.bad ~ .err,textarea.bad ~ .err{display:block}
+/* footer */
+footer{margin-top:40px;background:var(--navy800);color:var(--navy100)}
+footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:34px;padding:54px 20px}
+footer h4{color:var(--gold-lt);font:700 .78rem var(--sans);letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin:0 0 9px}
+footer a{color:var(--navy100);text-decoration:none;font-size:.9rem}
+footer a:hover{color:#fff}
+.fbottom{border-top:1px solid var(--navy600);padding:18px 20px;font-size:.78rem;color:var(--navy200);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr 1fr}}
+.crumb{color:var(--ink3);font-size:.9rem;margin-bottom:6px}
+.crumb a{color:var(--ink3)}
+.note{background:var(--surface2);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px;font-size:.9rem;color:var(--ink2);margin:18px 0}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--navy800);color:#fff;padding:12px 20px;border-radius:999px;font:600 .85rem var(--sans);opacity:0;pointer-events:none;transition:opacity .2s;z-index:99}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap">
+    <a href="#/" class="brand"><span class="mark">R&amp;R</span><span class="name">Raj &amp; Raj Associates</span></a>
+    <nav id="nav"></nav>
+    <a href="#/contact" class="btn btn-navy" style="display:none" id="hdrCta">Book a Consultation</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mnav"><div class="wrap"></div></div>
+</header>
+<div id="app"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================== CONFIG ============================== */
+const CONFIG = {
+  firmName: "Raj & Raj Associates",
+  tagline: "Clear legal help, explained in plain English.",
+  email: "Rajesh.bmoorthy@gmail.com",
+  phone: "+919886727021",
+  phoneDisplay: "+91 98867 27021",
+  address: "Kasthuri Nagar, Bengaluru - 530 036",
+  nav: [
+    ["home","Home"],["about","About"],["services","Services"],
+    ["cases","Case Law"],["insights","Insights"],["resources","Resources"],["contact","Contact"]
+  ],
+  hours: [["Monday – Friday","10:00 AM – 6:30 PM"],["Saturday","10:00 AM – 2:00 PM (by appointment)"],["Sunday","Closed"]]
+};
+
+/* ============================== CONTENT DATA ============================== */
+const SERVICES = [
+ {slug:"civil-litigation",name:"Civil Litigation",summary:"Disputes over contracts, money, property and civil wrongs.",description:"We represent individuals and businesses in civil suits before District and High Courts, from drafting the plaint or written statement through to trial and appeal.",items:["Recovery of money and damages suits","Injunctions and specific performance","Partition and property disputes","Contractual disputes and breach of contract","Appeals and revisions"]},
+ {slug:"criminal-defence",name:"Criminal Defence",summary:"Representation at every stage, from FIR to appeal.",description:"We advise and represent clients in criminal matters, including anticipatory and regular bail, quashing petitions, and trial defence before Magistrate and Sessions Courts.",items:["Anticipatory and regular bail applications","Quashing of FIR under Section 528 BNSS","Trial defence and cross-examination strategy","Cheque bounce cases (Section 138, N.I. Act)","Appeals against conviction or sentence"]},
+ {slug:"corporate-commercial",name:"Corporate & Commercial",summary:"Company formation, compliance and commercial disputes.",description:"From incorporation to ongoing compliance and commercial dispute resolution, we support founders and businesses at every stage of growth.",items:["Company and LLP incorporation","Shareholder and founder agreements","Regulatory and ROC compliance","Commercial contract drafting and review","Corporate dispute resolution"]},
+ {slug:"contract-law",name:"Contract Drafting & Review",summary:"Agreements that protect your interests, in plain language.",description:"We draft, review and negotiate contracts so that your rights and obligations are clear before a dispute ever arises.",items:["Service and vendor agreements","Employment and consultancy agreements","Non-disclosure and non-compete agreements","Lease and licence agreements","Breach of contract claims"]},
+ {slug:"employment-law",name:"Employment Law",summary:"Advice for employees and employers on workplace disputes.",description:"We advise on termination, wrongful dismissal, workplace harassment, and negotiate exits and settlements for both employees and employers.",items:["Wrongful termination and notice pay disputes","POSH Act complaints and inquiries","Employment contract review","Severance and settlement negotiation","Labour court and tribunal representation"]},
+ {slug:"family-law",name:"Family Law",summary:"Divorce, custody, maintenance and matrimonial disputes.",description:"We handle matrimonial matters with sensitivity, aiming for settlement where possible and firm representation in court where necessary.",items:["Mutual consent and contested divorce","Child custody and visitation","Maintenance and alimony","Domestic violence protection orders","Matrimonial property disputes"]},
+ {slug:"intellectual-property",name:"Intellectual Property",summary:"Protecting trademarks, copyrights and business ideas.",description:"We help creators and businesses register, protect and enforce their trademarks, copyrights and related rights.",items:["Trademark search, filing and prosecution","Copyright registration","IP infringement notices and litigation","Licensing agreements","Opposition and cancellation proceedings"]},
+ {slug:"property-real-estate",name:"Property & Real Estate",summary:"Title checks, transactions and property disputes.",description:"We conduct due diligence, draft sale and lease documents, and litigate property disputes including SARFAESI and partition matters.",items:["Title verification and due diligence","Sale deed and lease drafting","SARFAESI and bank recovery matters","Partition and inheritance disputes","RERA complaints"]},
+ {slug:"consumer-protection",name:"Consumer Protection",summary:"Complaints against defective goods and deficient services.",description:"We represent consumers before District, State and National Consumer Disputes Redressal Commissions.",items:["Defective product and deficient service complaints","Unfair trade practice complaints","Real estate and insurance consumer disputes","Appeals before State and National Commissions"]},
+ {slug:"cyber-law",name:"Cyber Law",summary:"Online fraud, data breaches and IT Act matters.",description:"We advise on and litigate matters arising under the Information Technology Act, including online fraud, hacking and data breaches.",items:["Online financial fraud complaints","Data breach and privacy matters","Cyberbullying and defamation online","IT Act compliance advice","Social media and platform disputes"]}
+];
+
+const PROCESS = [
+ ["Tell us what happened","Share your situation through the contact form, by phone or WhatsApp. No jargon needed — describe it in your own words."],
+ ["We review your matter","We assess the facts, relevant law and urgency, and identify what documents or information we will need from you."],
+ ["Consultation","We discuss your options in plain English, including likely timelines, costs and the realistic range of outcomes."],
+ ["Engagement & strategy","Once you decide to proceed, we agree scope and fees in writing and begin building your case or transaction."],
+ ["Action & updates","We act on your matter and keep you informed at each stage, in language you can actually follow."]
+];
+
+const PROBLEMS = [
+ ["Someone owes me money and won't pay","This is usually a civil recovery suit, sometimes combined with a cheque-bounce case if a cheque was involved.","civil-litigation"],
+ ["I've been called in by the police","You may need anticipatory bail or representation from the first stage — timing matters here.","criminal-defence"],
+ ["I want to start or register a company","We handle incorporation, founder agreements and the early compliance you'll need.","corporate-commercial"],
+ ["I've been asked to sign a contract I don't fully understand","We review and explain agreements before you sign, and flag clauses worth renegotiating.","contract-law"],
+ ["I was terminated from my job / I need to terminate an employee","This falls under employment law — the right process protects both employees and employers.","employment-law"],
+ ["I'm going through a separation or divorce","Family law covers divorce, custody and maintenance, and we prioritise settlement where possible.","family-law"],
+ ["Someone is using my brand name or copying my work","This is an intellectual property matter — we can send notices and pursue infringement claims.","intellectual-property"],
+ ["I'm buying property and want it checked first","A title due-diligence check before you pay is the single best way to avoid a property dispute later.","property-real-estate"],
+ ["A company sold me a defective product or bad service","Consumer protection law lets you claim compensation through the Consumer Commission.","consumer-protection"],
+ ["I've been a victim of online fraud or hacking","Cyber law and the IT Act give you a route to complain and, where possible, recover funds.","cyber-law"]
+];
+
+const TESTIMONIALS = [
+ ["PLACEHOLDER TESTIMONIAL — replace with a real, client-approved quote before sharing publicly. Example tone: \"They explained every step in language I could actually understand, and I always knew where my case stood.\"","Placeholder Client A","Practice area placeholder"],
+ ["PLACEHOLDER TESTIMONIAL — replace with a real, client-approved quote before sharing publicly. Example tone: \"Responsive, honest about timelines, and never overpromised an outcome.\"","Placeholder Client B","Practice area placeholder"],
+ ["PLACEHOLDER TESTIMONIAL — replace with a real, client-approved quote before sharing publicly. Example tone: \"We felt genuinely represented, not just processed as a file number.\"","Placeholder Client C","Practice area placeholder"]
+];
+
+const FAQS = [
+ ["How much will my case cost?","Fees depend on the complexity, forum and stage of your matter. We discuss and agree fees in writing before we begin work, after an initial review of your situation."],
+ ["How long will my case take?","This varies widely by matter type and court. During your consultation we give a realistic range based on similar matters, and update you if circumstances change."],
+ ["Do I need to visit your office in person?","Not always. Many consultations and updates can be handled by phone, video call or WhatsApp. Certain steps, like signing documents, may need an in-person visit."],
+ ["Is my information kept confidential?","Yes. Information you share is treated confidentially, subject to applicable law and the terms of engagement, and is only accessed by people who need it to handle your matter."],
+ ["What should I bring to my first consultation?","Any documents relevant to your matter — agreements, notices, correspondence, court papers — and a short written timeline of events, if you have one."]
+];
+
+const GLOSSARY = [
+ ["Plaint","The written document that starts a civil court case.","A formal statement of claim filed by a plaintiff under the Code of Civil Procedure, 1908, setting out facts and relief sought.","If you sue someone for unpaid rent, the plaint is the document that formally opens the case."],
+ ["Anticipatory Bail","Bail you apply for before you are arrested, if you fear arrest.","A direction under Section 482 BNSS (formerly Section 438 CrPC) that a person shall be released on bail in the event of arrest.","If you learn police may arrest you over a complaint, you can apply for anticipatory bail in advance."],
+ ["Injunction","A court order telling someone to do or stop doing something.","An equitable remedy under the Specific Relief Act, 1963, restraining a party from an act or compelling performance.","A court can grant an injunction stopping a neighbour from building over a shared boundary."],
+ ["Written Statement","The defendant's formal reply to a plaint.","The defendant's pleading in response to the plaint, admitting or denying its allegations.","After being sued, a defendant files a written statement disputing the claims made against them."],
+ ["SARFAESI Action","A bank's fast-track process to recover a defaulted loan using mortgaged property.","Action under the SARFAESI Act, 2002, allowing secured creditors to enforce security interests without court intervention in the first instance.","A bank can take possession of a mortgaged flat after due notice if loan instalments are not paid."],
+ ["Cheque Bounce (Sec. 138)","A criminal complaint for a cheque that was returned unpaid.","An offence under Section 138 of the Negotiable Instruments Act, 1881, for dishonour of a cheque for insufficiency of funds.","If a cheque given to repay a loan bounces, the payee can send a legal notice and, if unpaid, file a complaint."]
+];
+
+const CASES = [
+ {slug:"sample-civil-recovery",title:"Illustrative note: Limitation in money-recovery suits",citation:"Add citation here, e.g. (Year) X SCC Y",court:"Add court name",year:"20XX",summary:"PLACEHOLDER — replace with a short, accurate summary of a real judgment relevant to your practice, including the key facts and what the court decided.",takeaway:"PLACEHOLDER — replace with the practical lesson for clients, e.g. how limitation periods affect when a recovery suit must be filed.",service:"civil-litigation"},
+ {slug:"sample-bail-guidelines",title:"Illustrative note: Guidelines on anticipatory bail",citation:"Add citation here",court:"Add court name",year:"20XX",summary:"PLACEHOLDER — replace with a short, accurate summary of a real judgment on anticipatory bail principles.",takeaway:"PLACEHOLDER — replace with the practical takeaway for someone facing a similar situation.",service:"criminal-defence"},
+ {slug:"sample-sarfaesi-defence",title:"Illustrative note: Borrower remedies under SARFAESI",citation:"Add citation here",court:"Add court name",year:"20XX",summary:"PLACEHOLDER — replace with a short, accurate summary of a real SARFAESI judgment relevant to borrower defences.",takeaway:"PLACEHOLDER — replace with the practical takeaway, e.g. the borrower's right to approach DRT under Section 17.",service:"property-real-estate"}
+];
+
+const ARTICLES = [
+ {slug:"what-to-do-when-a-cheque-bounces",title:"What to do when a cheque bounces",category:"Civil Litigation",service:"civil-litigation",summary:"A step-by-step outline of the legal notice and complaint process under Section 138 of the Negotiable Instruments Act.",date:"2026-06-01",
+  body:["PLACEHOLDER ARTICLE — develop this outline into a full article, or replace it with your own writing.","Start by explaining what a \"dishonoured\" cheque means and the common reasons a bank returns one unpaid.","Cover the 30-day window to send a legal notice demanding payment, and the 15-day window the payee then has to file a complaint if payment is not made.","Include a short, practical example, then close with a note that this is general information and not a substitute for advice on your specific facts."]},
+ {slug:"checklist-before-signing-a-property-sale-deed",title:"Checklist before signing a property sale deed",category:"Property & Real Estate",service:"property-real-estate",summary:"The essential checks to complete before you commit to buying property in India.",date:"2026-05-15",
+  body:["PLACEHOLDER ARTICLE — develop this outline into a full article, or replace it with your own writing.","List the core checks: title chain verification, encumbrance certificate, khata/property tax records, and pending litigation search.","Explain the difference between a sale agreement and a sale deed, and why registration matters.","Add a short FAQ and a closing disclaimer."]},
+ {slug:"employee-rights-during-termination",title:"Employee rights during termination in India",category:"Employment Law",service:"employment-law",summary:"An overview of notice periods, severance and when a termination may be challenged.",date:"2026-04-20",
+  body:["PLACEHOLDER ARTICLE — develop this outline into a full article, or replace it with your own writing.","Cover contractual notice periods, statutory protections, and the difference between termination for cause and without cause.","Explain when an employee may have grounds to challenge a termination, and what documentation helps.","Add a short FAQ and a closing disclaimer."]}
+];
+
+/* ============================== HELPERS ============================== */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function esc(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function svc(slug){return SERVICES.find(s=>s.slug===slug);}
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),2600);}
+function art(name,label,cap){return '<div class="art" role="img" aria-label="'+esc(label)+'"><span class="cap">'+esc(cap||"Add a photograph here")+'</span></div>';}
+function faqBlock(list){return list.map(f=>'<details class="q"><summary>'+esc(f[0])+'<span class="plus">+</span></summary><div class="inner">'+esc(f[1])+'</div></details>').join("");}
+function crumb(parts){return '<p class="crumb">'+parts.map((p,i)=>i<parts.length-1?'<a href="'+p[1]+'">'+p[0]+'</a> / ':p[0]).join("")+'</p>';}
+
+/* ============================== NAV / HEADER ============================== */
+$("#nav").innerHTML=CONFIG.nav.map(n=>'<a data-r="'+n[0]+'" href="#/'+(n[0]==="home"?"":n[0])+'">'+n[1]+'</a>').join("")
+$("#mnav .wrap").innerHTML=CONFIG.nav.map(n=>'<a data-r="'+n[0]+'" href="#/'+(n[0]==="home"?"":n[0])+'">'+n[1]+'</a>').join("")+'<a class="btn btn-navy" style="text-align:center;margin-top:8px" href="#/contact">Book a Consultation</a>';
+$("#hdrCta").style.display="inline-flex";
+$("#burger").onclick=()=>{const o=$("#mnav").style.display==="block";$("#mnav").style.display=o?"none":"block";$("#burger").setAttribute("aria-expanded",!o);};
+$$("#mnav a").forEach(a=>a.addEventListener("click",()=>{$("#mnav").style.display="none";$("#burger").setAttribute("aria-expanded","false");}));
+
+/* ============================== PAGE BUILDERS ============================== */
+function pgHome(){
+  return `
+  <section class="hero"><div class="wrap">
+    <div>
+      <span class="eyebrow">Bengaluru, India</span>
+      <h1>Clear legal help, explained in plain English.</h1>
+      <p class="lead">Raj &amp; Raj Associates advises individuals and businesses across civil, criminal, corporate, family, property and cyber law — with straightforward advice and no unnecessary jargon.</p>
+      <div class="cta">
+        <a class="btn btn-navy" href="#/contact">Book a Consultation</a>
+        <a class="btn btn-line" href="#/services">View Services</a>
+      </div>
+    </div>
+    ${art("hero","Photograph of the Raj & Raj Associates office or team","Firm / office photograph")}
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    <div class="head-row">
+      <div><span class="eyebrow">What we do</span><h2>Practice areas</h2><p style="color:var(--ink2);max-width:520px">Ten areas of practice, each explained without the jargon.</p></div>
+      <a href="#/services" style="font-weight:700;font-size:.9rem">View all services →</a>
+    </div>
+    <div class="grid g3">
+      ${SERVICES.slice(0,6).map(s=>'<a class="card" href="#/services/'+s.slug+'"><h3>'+esc(s.name)+'</h3><p style="color:var(--ink2);margin:0">'+esc(s.summary)+'</p><span class="more">Learn more →</span></a>').join("")}
+    </div>
+  </div></section>
+
+  <section class="sec sec-navy" id="finder"><div class="wrap">
+    <span class="eyebrow" style="color:#D9C077">Not sure where to start?</span>
+    <h2>Tell us your problem, we'll point you to the right help</h2>
+    <div class="psf">
+      <div class="psf-list">
+        ${PROBLEMS.map((p,i)=>'<button class="psf-opt" data-i="'+i+'" aria-pressed="'+(i===0)+'">'+esc(p[0])+'</button>').join("")}
+      </div>
+      <div class="psf-ans" id="psfAns"></div>
+    </div>
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    <span class="eyebrow">How it works</span><h2>Our process, from first contact to resolution</h2>
+    <ol class="grid g5" style="list-style:none;padding:0;margin-top:28px">
+      ${PROCESS.map((s,i)=>'<li class="step"><span class="num">'+(i+1)+'</span><h3>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></li>').join("")}
+    </ol>
+  </div></section>
+
+  <section class="sec sec-alt"><div class="wrap">
+    <span class="eyebrow">Client feedback</span><h2>What clients say</h2>
+    <p class="note">Placeholder testimonials below — replace with real, client-approved quotes before sharing this publicly.</p>
+    <div class="grid g3">
+      ${TESTIMONIALS.map(t=>'<figure class="tcard"><span class="badge-ph">Placeholder</span><blockquote>“'+esc(t[0])+'”</blockquote><figcaption>'+esc(t[1])+'<span>'+esc(t[2])+'</span></figcaption></figure>').join("")}
+    </div>
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    <span class="eyebrow">Questions</span><h2>Frequently asked questions</h2>
+    <div style="max-width:760px;margin-top:18px">${faqBlock(FAQS)}</div>
+  </div></section>`;
+}
+
+function pgAbout(){
+  return `<section class="sec"><div class="wrap">
+    <span class="eyebrow">About us</span>
+    <h1>Plain-spoken legal advice, built on preparation</h1>
+    <p style="max-width:640px;color:var(--ink2);font-size:1.08rem">Raj &amp; Raj Associates was founded on the idea that clients deserve to understand their own case — not just receive a bill for it.</p>
+    <div class="grid g2" style="align-items:center;margin-top:36px">
+      ${art("about","Photograph of the firm's principal advocate or team","Team / principal photograph")}
+      <div>
+        <p>EDITABLE — replace this paragraph with your firm's real background: when it was founded, the advocates involved, and the courts and forums where you regularly appear.</p>
+        <p>EDITABLE — add a paragraph on your approach: how you prepare matters, how you communicate with clients, and what a client can expect at each stage.</p>
+      </div>
+    </div>
+    <div class="grid g3" style="margin-top:40px">
+      <div class="card"><h3>Preparation</h3><p style="color:var(--ink2);margin:0">EDITABLE — describe your approach to preparing a matter thoroughly before advising or appearing.</p></div>
+      <div class="card"><h3>Plain language</h3><p style="color:var(--ink2);margin:0">EDITABLE — describe your commitment to explaining law and process without unnecessary jargon.</p></div>
+      <div class="card"><h3>Responsiveness</h3><p style="color:var(--ink2);margin:0">EDITABLE — describe how and how often you keep clients updated on their matter.</p></div>
+    </div>
+  </div></section>`;
+}
+
+function pgServices(){
+  return `<section class="sec"><div class="wrap">
+    <span class="eyebrow">What we do</span><h1>Practice areas</h1>
+    <p style="max-width:600px;color:var(--ink2)">Ten areas of practice, each explained without the jargon.</p>
+    <div class="grid g3" style="margin-top:28px">
+      ${SERVICES.map(s=>'<a class="card" href="#/services/'+s.slug+'"><h3>'+esc(s.name)+'</h3><p style="color:var(--ink2);margin:0">'+esc(s.summary)+'</p><span class="more">Learn more →</span></a>').join("")}
+    </div>
+  </div></section>`;
+}
+
+function pgService(slug){
+  const s=svc(slug);
+  if(!s) return '<section class="sec"><div class="wrap"><h1>Service not found</h1><p><a href="#/services">Back to services</a></p></div></section>';
+  const rArt=ARTICLES.filter(a=>a.service===s.slug), rCase=CASES.filter(c=>c.service===s.slug);
+  return `<section class="sec"><div class="wrap">
+    ${crumb([["Services","#/services"],[s.name,""]])}
+    <div class="grid g2" style="align-items:center">
+      <div>
+        <h1>${esc(s.name)}</h1>
+        <p style="font-size:1.05rem;color:var(--ink2)">${esc(s.description)}</p>
+        <a class="btn btn-navy" href="#/contact/${s.slug}">Discuss this with us</a>
+      </div>
+      ${art("svc","Photograph representing "+s.name,s.name+" — add photo")}
+    </div>
+    <div style="margin-top:40px">
+      <h2>What we handle</h2>
+      <div class="grid g2">${s.items.map(i=>'<div class="card" style="cursor:default"><p style="margin:0">'+esc(i)+'</p></div>').join("")}</div>
+    </div>
+    ${rArt.length?`<div style="margin-top:40px"><h2>Related insights</h2><ul>${rArt.map(a=>'<li><a href="#/insights/'+a.slug+'" style="font-weight:700">'+esc(a.title)+'</a></li>').join("")}</ul></div>`:""}
+    ${rCase.length?`<div style="margin-top:40px"><h2>Related case law</h2><ul>${rCase.map(c=>'<li><a href="#/cases/'+c.slug+'" style="font-weight:700">'+esc(c.title)+'</a></li>').join("")}</ul></div>`:""}
+  </div></section>`;
+}
+
+function pgCases(){
+  return `<section class="sec"><div class="wrap">
+    <span class="eyebrow">Case law</span><h1>Notes on relevant judgments</h1>
+    <p style="max-width:640px;color:var(--ink2)">Short, plain-English notes on judgments relevant to our practice areas. Replace the placeholder entries with real citations before sharing this publicly.</p>
+    <div style="margin-top:28px;display:flex;flex-direction:column;gap:18px">
+      ${CASES.map(c=>{const s=svc(c.service);return `<article class="card" id="${c.slug}" style="cursor:default">
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="tag">${esc(s?s.name:"General")}</span><span style="color:var(--ink3);font-size:.82rem">${c.year}</span></div>
+        <h2 style="margin-top:10px">${esc(c.title)}</h2>
+        <p style="font-style:italic;color:var(--ink3);margin:2px 0 12px">${esc(c.citation)} — ${esc(c.court)}</p>
+        <p style="color:var(--ink2)">${esc(c.summary)}</p>
+        <p class="note" style="margin-bottom:0"><strong>Practical takeaway: </strong>${esc(c.takeaway)}</p>
+      </article>`;}).join("")}
+    </div>
+  </div></section>`;
+}
+
+function pgInsights(){
+  return `<section class="sec"><div class="wrap">
+    <span class="eyebrow">Insights</span><h1>Articles &amp; guides</h1>
+    <p style="max-width:640px;color:var(--ink2)">Plain-English explainers on common legal situations. Entries marked PLACEHOLDER are outlines to be developed or replaced.</p>
+    <div class="grid g3" style="margin-top:28px">
+      ${ARTICLES.map(a=>`<a class="card" href="#/insights/${a.slug}">
+        <span class="tag">${esc(a.category)}</span>
+        <h3 style="margin-top:10px">${esc(a.title)}</h3>
+        <p style="color:var(--ink2);margin:0">${esc(a.summary)}</p>
+        <time style="display:block;margin-top:12px;font-size:.78rem;color:var(--ink3)">${new Date(a.date).toLocaleDateString("en-IN",{year:"numeric",month:"long",day:"numeric"})}</time>
+      </a>`).join("")}
+    </div>
+  </div></section>`;
+}
+
+function pgArticle(slug){
+  const a=ARTICLES.find(x=>x.slug===slug);
+  if(!a) return '<section class="sec"><div class="wrap"><h1>Article not found</h1><p><a href="#/insights">Back to insights</a></p></div></section>';
+  return `<section class="sec"><div class="wrap" style="max-width:760px">
+    ${crumb([["Insights","#/insights"],[a.category,""]])}
+    <h1>${esc(a.title)}</h1>
+    <time style="display:block;color:var(--ink3);margin-bottom:18px">${new Date(a.date).toLocaleDateString("en-IN",{year:"numeric",month:"long",day:"numeric"})}</time>
+    ${a.body.map(p=>'<p style="color:var(--ink2)">'+esc(p)+'</p>').join("")}
+    <p class="note">Disclaimer: general information, not legal advice. Laws change — obtain advice on your own facts.</p>
+    <p><a href="#/insights">← Back to all guides</a></p>
+  </div></section>`;
+}
+
+function pgResources(){
+  return `<section class="sec"><div class="wrap">
+    <span class="eyebrow">Resources</span><h1>FAQ &amp; glossary</h1>
+    <p style="max-width:640px;color:var(--ink2)">General answers and plain-English definitions. For advice on your specific situation, please get in touch.</p>
+
+    <h2 style="margin-top:36px">Frequently asked questions</h2>
+    <div style="max-width:760px">${faqBlock(FAQS)}</div>
+
+    <h2 style="margin-top:44px">Glossary</h2>
+    <div class="grid g2">
+      ${GLOSSARY.slice().sort((a,b)=>a[0].localeCompare(b[0])).map(g=>`<div class="term">
+        <h3>${esc(g[0])}</h3>
+        <dl style="margin:0"><dt>Plain English</dt><dd>${esc(g[1])}</dd><dt>Legal meaning</dt><dd>${esc(g[2])}</dd><dt>Example</dt><dd>${esc(g[3])}</dd></dl>
+      </div>`).join("")}
+    </div>
+  </div></section>`;
+}
+
+function pgContact(pre){
+  const s=svc(pre);
+  return `<section class="sec"><div class="wrap">
+    <span class="eyebrow">Get in touch</span><h1>Discuss your legal concern</h1>
+    <p style="max-width:600px;color:var(--ink2)">Tell us what is happening, in your own words. We will reply with next steps.</p>
+    <p class="note">This is a static preview file — the form below opens your email app rather than submitting to a server. The deployed website has a fully working version that logs enquiries and emails the firm automatically.</p>
+    <div class="contact">
+      <div class="cinfo">
+        <h2 style="color:#fff">We will reply with next steps</h2>
+        <ul>
+          <li>📞<span><a href="tel:${CONFIG.phone}">${esc(CONFIG.phoneDisplay)}</a></span></li>
+          <li>✉️<span><a href="mailto:${CONFIG.email}">${esc(CONFIG.email)}</a></span></li>
+          <li>📍<span>${esc(CONFIG.address)}</span></li>
+        </ul>
+        <div class="hrs">${CONFIG.hours.map(h=>'<div><span>'+esc(h[0])+'</span><span>'+esc(h[1])+'</span></div>').join("")}</div>
+      </div>
+      <div class="cform">
+        <div class="seg"><button type="button" id="mC" aria-pressed="true">Request a consultation</button><button type="button" id="mQ" aria-pressed="false">Ask a legal question</button></div>
+        <form id="form" novalidate>
+          <div class="fgrid">
+            <div><label for="fN">Name</label><input id="fN" type="text" autocomplete="name"><div class="err">Please enter your name.</div></div>
+            <div><label for="fE">Email</label><input id="fE" type="email" autocomplete="email"><div class="err">Enter a valid email.</div></div>
+            <div><label for="fP">Phone</label><input id="fP" type="tel" autocomplete="tel"><div class="err">Enter a phone number.</div></div>
+            <div><label for="fA">Legal area</label><select id="fA"><option value="">Not sure yet</option>${SERVICES.map(x=>'<option value="'+x.slug+'" '+(s&&s.slug===x.slug?"selected":"")+'>'+esc(x.name)+'</option>').join("")}</select></div>
+            <div class="full"><label for="fD">Brief description</label><textarea id="fD" placeholder="What happened, and what outcome do you want? Include any deadline."></textarea><div class="err">A short description helps us respond.</div></div>
+            <div class="full"><span style="display:block;font:600 .86rem var(--sans);color:var(--navy700);margin-bottom:6px">Preferred contact method</span>
+              <div class="radios"><label><input type="radio" name="pf" value="Phone call" checked>Phone call</label><label><input type="radio" name="pf" value="WhatsApp">WhatsApp</label><label><input type="radio" name="pf" value="Email">Email</label></div>
+            </div>
+            <div class="full" id="dtg"><label for="fT">Preferred date and time</label><input id="fT" type="datetime-local"></div>
+          </div>
+          <p class="conf" style="margin-top:14px">Information submitted through this form will be treated confidentially subject to applicable law and the terms of engagement. Please avoid sending originals, passwords or highly sensitive details through this form.</p>
+          <label class="check"><input type="checkbox" id="fC"><span>I agree that my details will be emailed to Raj &amp; Raj Associates and used to respond to this enquiry.</span></label>
+          <div class="err" id="cE" style="margin:-6px 0 12px">Please tick to continue.</div>
+          <button class="btn btn-navy" type="submit" id="fS" style="width:100%;justify-content:center">Request a Consultation</button>
+        </form>
+        <div class="done" id="done" role="status"></div>
+      </div>
+    </div>
+  </div></section>`;
+}
+
+/* ============================== WIRE INTERACTIVE BITS ============================== */
+function wirePsf(){
+  const render=i=>{const p=PROBLEMS[i];const s=svc(p[2]);
+    $("#psfAns").innerHTML='<span class="eyebrow" style="color:#D9C077">Likely solution</span><p style="font-size:1.08rem;color:#fff">'+esc(p[1])+'</p><a class="btn btn-gold" href="#/services/'+p[2]+'">See the relevant service →</a>';};
+  render(0);
+  $$(".psf-opt").forEach(btn=>btn.onclick=()=>{$$(".psf-opt").forEach(b=>b.setAttribute("aria-pressed","false"));btn.setAttribute("aria-pressed","true");render(+btn.dataset.i);});
+}
+function wireContact(){
+  let mode="c",sum="";
+  const setM=m=>{mode=m;$("#mC").setAttribute("aria-pressed",m==="c");$("#mQ").setAttribute("aria-pressed",m==="q");$("#dtg").style.display=m==="c"?"":"none";$("#fS").textContent=m==="c"?"Request a Consultation":"Submit Your Question";};
+  $("#mC").onclick=()=>setM("c");$("#mQ").onclick=()=>setM("q");
+  const n=new Date();n.setMinutes(n.getMinutes()-n.getTimezoneOffset());$("#fT").min=n.toISOString().slice(0,16);
+  $("#form").onsubmit=e=>{
+    e.preventDefault();let ok=true;
+    const chk=(el,t)=>{const b=!t(el.value.trim());el.classList.toggle("bad",b);if(b)ok=false;};
+    chk($("#fN"),v=>v.length>1);chk($("#fE"),v=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v));chk($("#fP"),v=>v.replace(/\D/g,"").length>=7);chk($("#fD"),v=>v.length>9);
+    const c=$("#fC").checked;$("#cE").style.display=c?"none":"block";if(!c)ok=false;
+    if(!ok){toast("Please check the highlighted fields.");return;}
+    const areaSlug=$("#fA").value,areaObj=svc(areaSlug);
+    const f={"Type":mode==="c"?"Consultation request":"Legal question","Name":$("#fN").value.trim(),"Email":$("#fE").value.trim(),"Phone":$("#fP").value.trim(),"Legal area":areaObj?areaObj.name:"Not sure","Preferred contact":$("input[name=pf]:checked").value,"Preferred time":mode==="c"?$("#fT").value:"","Description":$("#fD").value.trim()};
+    sum=Object.entries(f).filter(x=>x[1]).map(x=>x[0]+": "+x[1]).join("\n");
+    const box=$("#done");
+    box.innerHTML='<b>Opening your email app…</b><p style="margin:8px 0 12px">This static preview file can\'t submit to a server, so it opens your email app instead, addressed to '+esc(CONFIG.email)+' with your details pre-filled. Press Send there to finish.</p><button class="btn btn-navy" type="button" id="cp">Copy enquiry summary</button>';
+    box.classList.add("show");
+    $("#cp").onclick=async()=>{try{await navigator.clipboard.writeText(sum);toast("Copied.");}catch(err){toast("Copy not available.");}};
+    try{location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Website enquiry: "+f.Type+" from "+f.Name)+"&body="+encodeURIComponent(sum);}catch(err){}
+  };
+}
+
+/* ============================== ROUTER ============================== */
+function route(){
+  const parts=(location.hash.replace(/^#\/?/,"")||"").split("/"),p=parts[0]||"home",s=parts[1];
+  let html,after;
+  if(p==="about")html=pgAbout();
+  else if(p==="services")html=s?pgService(s):pgServices();
+  else if(p==="cases")html=pgCases();
+  else if(p==="insights"){html=s?pgArticle(s):pgInsights();}
+  else if(p==="resources")html=pgResources();
+  else if(p==="contact"){html=pgContact(s);after=wireContact;}
+  else {html=pgHome();after=wirePsf;}
+  $("#app").innerHTML=html;
+  if(after)after();
+  $$("#nav a,#mnav a").forEach(a=>a.classList.toggle("on",a.dataset.r===p));
+  const titles={home:"Raj & Raj Associates | Clear Legal Help",about:"About | Raj & Raj Associates",services:"Legal Services | Raj & Raj Associates",cases:"Case Law | Raj & Raj Associates",insights:"Legal Insights | Raj & Raj Associates",resources:"Resources | Raj & Raj Associates",contact:"Contact | Raj & Raj Associates"};
+  document.title=titles[p]||titles.home;
+  if(!(p==="cases"&&s))window.scrollTo(0,0);
+}
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
